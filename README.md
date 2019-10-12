@@ -18,7 +18,24 @@ The function `Roman_to_Arabic(numeral_string)` converts a Roman numeral to an in
 If the string is empty, the loop can be stopped.
 
 The string is not a valid Roman numeral if
-* at some step the Roman symbol isn't larger than the intermediary result;
+* at some step the Roman symbol isn't larger than the intermediate result;
 * the loop ended and there are still characters in the string left.
 
 In these cases a ValueError is raised.
+
+---
+
+#### Examples:
+
+```
+>>> ./roman_converter.py MDCLIX
+1659
+>>> ./roman_converter.py 1024
+MXXIV
+>>> ./roman_converter.py -2
+ValueError: -2 is not a valid input
+>>> ./roman_converter.py DACLIX
+ValueError: DACLIX is not a valid input
+>>> ./roman_converter.py IVI
+ValueError: IVI is not a valid input
+```
